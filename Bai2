@@ -1,0 +1,40 @@
+#include <stdio.h>
+#include <math.h>
+
+int is_square(int n) {
+    int sqrt_n = (int)sqrt(n);
+    return sqrt_n * sqrt_n == n;
+}
+
+int count_squares(int a, int b) {
+    int count = 0;
+    for (int i = a; i <= b; i++) {
+        if (is_square(i)) {
+            count++;
+        }
+    }
+    return count;
+}
+
+int main() {
+    int n;
+
+    // Nhập n
+    printf("Nhập số n: ");
+    scanf("%d", &n);
+
+    // Đếm số lượng số chính phương
+    int count = count_squares(1, n);
+
+    // In ra số lượng số chính phương
+    printf("Có %d số chính phương nhỏ hơn %d.\n", count, n);
+
+    // In ra các số chính phương
+    for (int i = 1; i <= n; i++) {
+        if (is_square(i)) {
+            printf("%d ", i);
+        }
+    }
+
+    return 0;
+}
