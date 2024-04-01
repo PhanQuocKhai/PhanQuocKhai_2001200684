@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+void inBoi7(int n) {
+  // Kiểm tra n có phải là bội số của 7 hay không
+  if (n % 7 == 0) {
+    // In ra n
+    printf("%d ", n);
+  }
+}
+
+int main() {
+  // Lặp từ 10 đến 99
+  for (int i = 10; i <= 99; i++) {
+    // Gọi hàm inBoi7(i) để kiểm tra và in ra i nếu là bội số của 7
+    inBoi7(i);
+  }
+
+  return 0;
+}
